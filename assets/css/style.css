@@ -1,24 +1,8 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
-  /**
-   * colors
-   */
+  
 
   --eerie-black_a95: hsla(204, 9%, 11%, 0.95);
   --eerie-black_a50: hsla(204, 9%, 11%, 0.5);
@@ -46,15 +30,11 @@
   --primary: var(--light-sky-blue);
   --on-primary: var(--prussian-blue);
 
-  /**
-   * gradient
-   */
+ 
 
   --gradient: linear-gradient(180deg, hsla(204, 9%, 11%, 0.90) 60%, transparent 120%);
 
-  /**
-   * typography
-   */
+
 
   --ff-inter: 'Inter', sans-serif;
 
@@ -66,16 +46,12 @@
   --fw-400: 400;
   --fw-500: 500;
 
-  /**
-   * box shadow
-   */
+
 
   --shadow-1: 0 1px 4px 1px var(--black_a20);
   --shadow-2: 0 1px 4px 1px var(--black_a50);
 
-  /**
-   * border radius
-   */
+
 
   --radius-24: 24px;
   --radius-16: 16px;
@@ -83,9 +59,7 @@
   --radius-pill: 100px;
   --radius-circle: 50%;
 
-  /**
-   * transition
-   */
+  
 
   --transition-1: 200ms cubic-bezier(0.2, 0, 0, 1);
   --transition-2: 300ms cubic-bezier(0.2, 0, 0, 1);
@@ -96,9 +70,6 @@
 
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -171,9 +142,7 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+
 
 .material-symbols-rounded {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' -25, 'opsz' 24;
@@ -236,9 +205,7 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/*-----------------------------------*\
-  #TOP APP BAR
-\*-----------------------------------*/
+
 
 .top-bar {
   position: fixed;
@@ -261,9 +228,6 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/*-----------------------------------*\
-  #PLAYER
-\*-----------------------------------*/
 
 .volume { display: none; }
 
@@ -389,10 +353,6 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/*-----------------------------------*\
-  #PLAYLIST
-\*-----------------------------------*/
-
 .playlist {
   position: fixed;
   top: 0;
@@ -471,27 +431,16 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
 
-/**
- * responsive for large than 575px screen
- */
 
 @media (min-width: 575px) {
 
-  /**
-   * RESET
-   */
+
 
   body { background-size: 100%; }
 
 
 
-  /**
-   * PLAYER
-   */
 
   .player { justify-content: center; }
 
@@ -503,21 +452,15 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/**
- * responsive for large than 992px screen
- */
+
 
 @media (min-width: 992px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+ 
 
   :root {
 
-    /**
-     * typography
-     */
+   
 
     --headline-sm: 4.2rem;
     --label-lg: 2.2rem;
@@ -525,10 +468,6 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
   }
 
 
-
-  /**
-   * RESET
-   */
 
   body {
     background-size: 40% 100%;
@@ -539,9 +478,7 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-  /**
-   * REUSED STYLE
-   */
+
 
   .btn-icon {
     width: 54px;
@@ -552,17 +489,12 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-  /**
-   * TOP APP BAR
-   */
 
   .top-bar-actions { display: none; }
 
 
 
-  /**
-   * PLAYER
-   */
+
 
   .player {
     --padding: 48px;
@@ -633,9 +565,6 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-  /**
-   * PLAYLIST
-   */
 
   .overlay { display: none; }
 
@@ -663,15 +592,10 @@ body:hover::-webkit-scrollbar-thumb { background-color: var(--surface-variant); 
 
 
 
-/**
- * responsive for large than 1200px screen
- */
+
 
 @media (min-width: 1200px) {
 
-  /**
-   * PLAYLIST
-   */
 
   .playlist {
     padding: 32px;
