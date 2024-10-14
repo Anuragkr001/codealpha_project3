@@ -2,9 +2,6 @@
 
 
 
-/**
- * all music information
- */
 
 const musicData = [
   {
@@ -56,9 +53,7 @@ const musicData = [
 
 
 
-/**
- * add eventListnere on all elements that are passed
- */
+
 
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
@@ -68,11 +63,7 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 
 
-/**
- * PLAYLIST
- * 
- * add all music in playlist, from 'musicData'
- */
+
 
 const playlist = document.querySelector("[data-music-list]");
 
@@ -93,12 +84,6 @@ for (let i = 0, len = musicData.length; i < len; i++) {
 
 
 
-/**
- * PLAYLIST MODAL SIDEBAR TOGGLE
- * 
- * show 'playlist' modal sidebar when click on playlist button in top app bar
- * and hide when click on overlay or any playlist-item
- */
 
 const playlistSideModal = document.querySelector("[data-playlist]");
 const playlistTogglers = document.querySelectorAll("[data-playlist-toggler]");
@@ -114,12 +99,6 @@ addEventOnElements(playlistTogglers, "click", togglePlaylist);
 
 
 
-/**
- * PLAYLIST ITEM
- * 
- * remove active state from last time played music
- * and add active state in clicked music
- */
 
 const playlistItems = document.querySelectorAll("[data-playlist-item]");
 
@@ -139,11 +118,7 @@ addEventOnElements(playlistItems, "click", function () {
 
 
 
-/**
- * PLAYER
- * 
- * change all visual information on player, based on current music
- */
+
 
 const playerBanner = document.querySelector("[data-player-banner]");
 const playerTitle = document.querySelector("[data-title]");
@@ -170,11 +145,11 @@ const changePlayerInfo = function () {
 
 addEventOnElements(playlistItems, "click", changePlayerInfo);
 
-/** update player duration */
+
 const playerDuration = document.querySelector("[data-duration]");
 const playerSeekRange = document.querySelector("[data-seek]");
 
-/** pass seconds and get timcode formate */
+
 const getTimecode = function (duration) {
   const minutes = Math.floor(duration / 60);
   const seconds = Math.ceil(duration - (minutes * 60));
@@ -191,11 +166,7 @@ audioSource.addEventListener("loadeddata", updateDuration);
 
 
 
-/**
- * PLAY MUSIC
- * 
- * play and pause music when click on play button
- */
+
 
 const playBtn = document.querySelector("[data-play-btn]");
 
@@ -216,7 +187,6 @@ const playMusic = function () {
 playBtn.addEventListener("click", playMusic);
 
 
-/** update running time while playing music */
 
 const playerRunningTime = document.querySelector("[data-running-time");
 
@@ -230,11 +200,7 @@ const updateRunningTime = function () {
 
 
 
-/**
- * RANGE FILL WIDTH
- * 
- * change 'rangeFill' width, while changing range value
- */
+
 
 const ranges = document.querySelectorAll("[data-range]");
 const rangeFill = document.querySelector("[data-range-fill]");
@@ -250,11 +216,7 @@ addEventOnElements(ranges, "input", updateRangeFill);
 
 
 
-/**
- * SEEK MUSIC
- * 
- * seek music while changing player seek range
- */
+
 
 const seek = function () {
   audioSource.currentTime = playerSeekRange.value;
@@ -265,9 +227,7 @@ playerSeekRange.addEventListener("input", seek);
 
 
 
-/**
- * END MUSIC
- */
+
 
 const isMusicEnd = function () {
   if (audioSource.ended) {
@@ -281,9 +241,7 @@ const isMusicEnd = function () {
 
 
 
-/**
- * SKIP TO NEXT MUSIC
- */
+
 
 const playerSkipNextBtn = document.querySelector("[data-skip-next]");
 
@@ -304,9 +262,6 @@ playerSkipNextBtn.addEventListener("click", skipNext);
 
 
 
-/**
- * SKIP TO PREVIOUS MUSIC
- */
 
 const playerSkipPrevBtn = document.querySelector("[data-skip-prev]");
 
@@ -327,11 +282,6 @@ playerSkipPrevBtn.addEventListener("click", skipPrev);
 
 
 
-/**
- * SHUFFLE MUSIC
- */
-
-/** get random number for shuffle */
 const getRandomMusic = () => Math.floor(Math.random() * musicData.length);
 
 const shuffleMusic = () => currentMusic = getRandomMusic();
@@ -349,9 +299,7 @@ playerShuffleBtn.addEventListener("click", shuffle);
 
 
 
-/**
- * REPEAT MUSIC
- */
+
 
 const playerRepeatBtn = document.querySelector("[data-repeat]");
 
@@ -369,11 +317,7 @@ playerRepeatBtn.addEventListener("click", repeat);
 
 
 
-/**
- * MUSIC VOLUME
- * 
- * increase or decrease music volume when change the volume range
- */
+
 
 const playerVolumeRange = document.querySelector("[data-volume]");
 const playerVolumeBtn = document.querySelector("[data-volume-btn]");
@@ -394,9 +338,7 @@ const changeVolume = function () {
 playerVolumeRange.addEventListener("input", changeVolume);
 
 
-/**
- * MUTE MUSIC
- */
+
 
 const muteVolume = function () {
   if (!audioSource.muted) {
